@@ -1,0 +1,16 @@
+Sample code to set/display the date/time from a Microchip MCP7941x.
+
+Ian Chilton <ian@ichilton.co.uk>
+08/11/2011
+
+The MCP79411 is an I2C RTC chip which also includes 1K of EEPROM,
+64 bytes of SRAM and a Unique ID.
+
+There are 3 flavours of the MCP7941x, which differ in the Unique ID content:
+MCP79410 - Blank
+MCP79411 - EUI-48 Mac Address
+MCP79412 - EUI-64 Mac Address
+
+The chip uses an I2C address of 0x57 for the EEPROM and 0x6f for the RTC and SRAM
+(the Wire library takes care of adding a LSB for read/write selection)
+

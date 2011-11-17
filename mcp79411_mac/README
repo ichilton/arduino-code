@@ -1,0 +1,21 @@
+Sample code to read the unique MAC address from a Microchip MCP79411.
+
+Ian Chilton <ian@ichilton.co.uk>
+08/11/2011
+
+The MCP79411 is an I2C RTC chip which also includes 1K of EEPROM,
+64 bytes of SRAM and a Unique ID.
+
+There are 3 flavours of the MCP7941x, which differ in the Unique ID content:
+MCP79410 - Blank
+MCP79411 - EUI-48 Mac Address
+MCP79412 - EUI-64 Mac Address
+
+This code is for the MCP79411 so it reads 6 bytes starting from 0xF2
+
+The chip uses an I2C address of 0x57 for the EEPROM and 0x6f for the RTC and SRAM
+(the Wire library takes care of adding a LSB for read/write selection)
+
+MAC addresses seem to start with 00:04:A3 which is correctly from their
+allocation: http://hwaddress.com/?q=microchip
+

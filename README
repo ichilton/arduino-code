@@ -1,0 +1,8 @@
+Collection of code samples for the Arduino and Nanode boards.
+
+See http://ichilton.github.com/nanode for more information.
+
+* mcp79411_mac - Code to read unique MAC address from a Microchip MCP7941x IC.
+
+* mcp7941x_rtc - Code to set and get the date/time on a Microchip MCP7941x IC.
+
